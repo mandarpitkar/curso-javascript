@@ -47,11 +47,46 @@ function corFavorita(cor) {
 }
     console.log(corFavorita(7))
 
-    function mostrarConsole(){
+    /*function mostrarConsole(){
         return("Oi")
     } console.log(mostrarConsole())
     addEventListener('click', mostrarConsole())
+    */
 
+    function imc2(peso, altura) {
+        const imc = (peso / (altura * altura))
+        console.log(imc)
+    }
+    imc2(60, 1.5)
 
+    function terceiraIdade(idade) {
+        console.log(idade)    
+        if (typeof idade >= 60){
+        return "True"
+    }   else {
+        return "False"
+    }
+}
+console.log(terceiraIdade(60))
 
+//escopo
+var totalPaises = 173
+var paisVisitei = 20
+function faltaPaises(paisVisitei) {
+    
+}
+console.log(`Falta visitar ${totalPaises - paisVisitei} paises!`)
 
+//Escopo Lexico
+var professao = 'Designer'
+function dados(){
+    var nome = 'Mandar'
+    var idade = 36
+    function outroDados(){
+        var endereco = 'Sao Paulo'
+        var pais = 'Brasl'
+        return('dados') `${nome}, ${idade}, ${endereco}, ${pais}`
+    } 
+    return outroDados()
+} 
+console.log(dados())
